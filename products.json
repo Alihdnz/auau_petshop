@@ -1,0 +1,13 @@
+{"products":[ {
+    "id" : 1,
+    "image": "./assets/product/product-1.png",
+    "name" : "product1",
+    "price" : 15.90
+  },
+  {
+    "id" : 2,
+    "image": "./assets/product/product-2.png",
+    "name" : "product2",
+    "price" : 20.90
+  }
+]}

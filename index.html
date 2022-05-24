@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/app.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>AuAu PetShop</title>
+</head>
+
+
+<div class="minicart absolute z-9999">
+   
+   <div class="topMiniCart flex itens center space between mgl-40 pdb-10 pdt-10">
+       
+    <h2 class="uppercase mgl-20">minha sacola</h2>
+    
+    <a class="mgr-15 textColor hovered bold" href="#">X</a>
+   </div>
+
+   <div class="cartContent">
+
+        <div class="productInCart flex row mgl-40 mgt-15">
+            <img src="./assets/product/product-1.png" alt="">
+        
+            <div class="productCartInfo flex column mgl-20">
+                <span class=" productName font-600">Product Name - 3m</span>
+                <span class="atribute color textColor">Cor: Misto</span>
+                <span class="atribute size textColor">Tamanho: 3m</span>
+
+                <Span class="productPrice font-600">R$ 18,90</Span>
+            </div>        
+        </div>
+   </div>
+        
+</div>
+
+
+<header class="flex column itens center white-bg"> 
+    <div class="topbar primary-bg flex row itens content center">
+
+        <span>Frete Grátis -<b> Acima R$ 299</b> - Sul e Sudeste</span>
+        <div class="divider vertical"></div>
+
+        <span>Não serviu? A <b>primeira troca</b> é grátis </span>
+        <div class="divider vertical"></div>
+
+        <span>10% de desconto no boleto</span>
+        <div class="divider vertical"></div>
+
+        <span>Pague em até 10x sem juros</span>
+        
+    </div>
+
+        <div class="headerContent flex itens center">
+            <img class="headerLogo" src="./assets/header/logo.png" alt="AuAu Petshop Logo">
+
+            <nav>
+                <ul class="flex row">
+                    <li class="item"><a  href="#">Rações</a></li>
+                    <li class="item"><a  href="#">Acessórios</a></li>
+                    <li class="item"><a  href="#">Kits</a></li>
+                    <li class="item"><a  href="#">Combos</a></li>
+                    <li class="item"><a class="bg-hovered cubicBezier-1"href="#">Promoções</a></li>
+                </ul>
+
+            </nav>
+
+        <div class="headerButton flex space between">
+            <a href="#" class="pointer"><img src="./assets/header/search.png" alt="Pesquisar produto"></a>
+            <a href="#" class="pointer"><img src="./assets/header/wish.png" alt="Lista de desejos"></a>
+            <a href="#" class="pointer"><img src="./assets/header/cart.png" alt="Carrinho"></a>
+        </div>
+
+        </div>
+</header>
+
+<body class="flex itens center column">
+    
+    <div class="bannerContainer">
+        <img class="fullBanner" src="./assets/banner/full-banner.png">
+    </div>
+
+    <div class="pageContent flex itens content center mgt-40 column">
+        <div class="groupContainer mgb-15 flex itens center">
+            <div class="divider horizontal medium"></div>
+
+                    <div class="groupTitle flex column itens content center">
+                        <span class="strong textColor">Os Nossos Queridinhos</span>
+                        <span class="small textColor">Produtos escolhidos com carinho para você!</span>
+                    </div>
+
+            <div class="divider horizontal medium"></div>
+
+           
+            </div>
+
+            <div class="groupContent flex column">
+            
+
+            <div class="topsellers products mgb-15 flex row">
+                <div class="sideBannerContainer mgr-20">
+                    <img class="sideBanner" src="./assets/banner/side-banner-1.png">
+                </div>
+
+                <div class="productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                    <img class="productImage" src="./assets/product/product-1.png">
+
+                    <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                    <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                    <div class="infoPrice flex row mgt-15">
+                        <span class="Price mgr-10">R$ 18,90</span>
+
+                        <span class="currentPrice textColor">R$ 35,90</span>
+                    </div>
+
+                    <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                </div>
+                <div class="productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                    <img class="productImage" src="./assets/product/product-1.png">
+
+                    <p class="productName  textColor mgt-15">Product Name - 3m</p>
+
+                    <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                    <div class="infoPrice flex row mgt-15">
+                        <span class="Price mgr-10">R$ 18,90</span>
+
+                        <span class="currentPrice textColor">R$ 35,90</span>
+                    </div>
+
+                    <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                </div>
+                
+            </div>    
+            
+            <div class="topsellers products mgb-15 flex row">
+                <div class="productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                    <img class="productImage" src="./assets/product/product-1.png">
+
+                    <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                    <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                    <div class="infoPrice flex row mgt-15">
+                        <span class="Price mgr-10">R$ 18,90</span>
+
+                        <span class="currentPrice textColor">R$ 35,90</span>
+                    </div>
+
+                    <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                </div>
+                <div class="productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                    <img class="productImage" src="./assets/product/product-1.png">
+
+                    <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                    <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                    <div class="infoPrice flex row mgt-15">
+                        <span class="Price mgr-10">R$ 18,90</span>
+
+                        <span class="currentPrice textColor">R$ 35,90</span>
+                    </div>
+
+                    <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                </div>
+
+                <div class="sideBannerContainer mgl-20">
+                    <img class="sideBanner" src="./assets/banner/side-banner-1.png">
+                </div>
+            </div>
+
+            
+            </div>
+
+            <div class="groupContainer mgb-15 flex itens center">
+                <div class="divider horizontal medium  mgr-35"></div>
+                    <div class="groupTitle flex column itens content center">
+                        <span class="strong textColor">Produtos Exclusivos</span>
+
+                    </div>
+                <div class="divider horizontal medium  mgl-35"></div>
+            </div>
+
+            <div class="groupContent flex slider" id="slider">
+
+
+                    <div class="carousel responsive" >
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                        
+                        <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                            <img class="productImage" src="./assets/product/product-1.png">
+
+                            <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                            <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                            <div class="infoPrice flex row mgt-15">
+                                <span class="Price mgr-10">R$ 18,90</span>
+
+                                <span class="currentPrice textColor">R$ 35,90</span>
+                            </div>
+
+                            <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                        </div>
+                    </div>
+               
+
+            </div>
+            <div class='footerBanners mgt-40'>
+                <img src="./assets/banner/footer-banner-1.png" alt="">
+                <img src="./assets/banner/footer-banner-2.png" alt="">
+                
+            </div>
+            
+      
+
+
+        </div>
+
+        
+        
+    </div>
+
+    <div class="borderTop mgt-40"></div>
+    <div class="greyContainer flex itens center column">
+   
+          
+        <div class="groupContainer mgb-15 mgt-40 flex itens center">
+            <div class="divider horizontal medium  mgr-35"></div>
+                <div class="groupTitle flex column itens content center">
+                    <span class="strong textColor">Produtos Exclusivos</span>
+
+                </div>
+            <div class="divider horizontal medium  mgl-35"></div>
+        </div>
+
+        <div class="groupContent flex slider footer" id="slider">
+
+
+                <div class="carousel responsive" >
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                    
+                    <div class="item productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2">
+                        <img class="productImage" src="./assets/product/product-1.png">
+
+                        <p class="productName textColor mgt-15">Product Name - 3m</p>
+
+                        <img class="rating mgt-15" src="./assets/product/rate.png">
+
+                        <div class="infoPrice flex row mgt-15">
+                            <span class="Price mgr-10">R$ 18,90</span>
+
+                            <span class="currentPrice textColor">R$ 35,90</span>
+                        </div>
+
+                        <button class="buttonComprar mgt-15 mgb-10 pointer bg-hovered cubicBezier-2">COMPRAR</button>
+
+
+                    </div>
+                </div>
+        
+
+        </div>
+    </div>
+    <div class="borderBottom mgb-15"></div>
+</body>
+
+<footer>
+    <div class="footerContainer column flex itens center">
+        <img class="footerLogo mgb-15" src="./assets/header/logo.png" alt="AuAu Petshop Logo">
+    
+        <div class="links flex row mgt-40">
+            <div class="institucional flex column">
+                <h4 class="sub-title uppercase">institucional</h4>
+                <a href="#">Quem somos</a>
+                <a href="#">Missão, Visão e Valores</a>
+                <a href="#">Politica de Privacidade</a>
+            </div>
+            <div class="atendimento flex column">
+                <h4 class="sub-title uppercase">institucional</h4>
+                <a href="#">Entregas</a>
+                <a href="#">Trocas e Devoluções</a>
+                <a href="#">Fale Conosco</a>
+                <a href="#">Dúvidas Frequentes</a>
+            </div>
+            <div class="confie flex column">
+                <h4 class="sub-title uppercase">Confie</h4>
+                <a href="#"><img src="./assets/footer/jet.png" alt="jet E-business Logo"></a>
+                <a href="#"><img src="./assets/footer/seal.png" alt="Compre e confie"></a>
+            </div>
+        </div>
+
+        <div class="brands mgt-40">
+            <img src="./assets/footer/brands.png" alt="cartões aceitos">
+
+        </div>
+    </div>
+
+    
+</footer>
+
+</html>
