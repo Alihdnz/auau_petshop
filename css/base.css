@@ -6,6 +6,10 @@ li {
   list-style-type: none;
 }
 
+.input {
+  border: none;
+}
+
 .subtitle {
   font-size: 1.25rem;
   font-weight: 700;
@@ -151,6 +155,22 @@ li {
   font-size: 26px;
 }
 
+.font-22 {
+  font-size: 22px;
+}
+
+.text-align.center {
+  text-align: center;
+}
+
+.text-align.left {
+  text-align: left;
+}
+
+.text-align.right {
+  text-align: right;
+}
+
 /* margin */
 .mgl-5 {
   margin-left: 5px;
@@ -174,6 +194,10 @@ li {
 
 .mgl-40 {
   margin-left: 40px;
+}
+
+.mgl-40.x10 {
+  margin-left: 400px;
 }
 
 .mgr-5 {
@@ -206,6 +230,10 @@ li {
 
 .mgt-10 {
   margin-top: 10px;
+}
+
+.mgt-10.x10 {
+  margin-top: 100px;
 }
 
 .mgt-15 {
@@ -265,6 +293,14 @@ li {
 
 .z-9999 {
   z-index: 9999;
+}
+
+.visibility.visible {
+  visibility: visible;
+}
+
+.visibility.hidden {
+  visibility: hidden;
 }
 
 .cubicBezier-1 {

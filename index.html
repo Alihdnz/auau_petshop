@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/mq.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./scripts/slider.js"></script>
     <script src="./scripts/app.js"></script>
@@ -19,13 +20,36 @@
 </head>
 
 
-<div class="minicart absolute z-9999">
+<div class="newsletterModalContainer">
+
+    <div class="newsletterContent">
+
+        <div class="textContent text-align center mgl-40 mgt-10 x10 ">
+            <span class="font-22"> Que tal um descontão de <b>10%</b> na sua compra?</span>
+
+            <p>Cadastre-se e ganhe um <b>super desconto</b> para aproveitar e deixar seu pet felizão</p>
+
+
+            <div class="inputContainer flex itens content center mgt-30">
+                <input type="text" class="input" placeholder="email@example.com.br"> 
+                <button class="newsletterBtn pointer mgl-10">Cadastrar</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div id="minicart" class="minicart absolute z-9999 visibility hidden cubicBezier-2">
+    
    
    <div class="topMiniCart flex itens center space between mgl-40 pdb-10 pdt-10">
        
     <h2 class="uppercase mgl-20">minha sacola</h2>
     
-    <a class="mgr-15 textColor hovered bold" href="#">X</a>
+    <a class="mgr-15 textColor hovered bold" href="#" onclick="closeCart()">X</a>
    </div>
 
    <div class="cartContent">
@@ -47,7 +71,7 @@
 
 
 <header class="flex column itens center white-bg"> 
-    <div class="topbar primary-bg flex row itens content center">
+    <div class="topbar primary-bg flex row itens content center mobileHide">
 
         <span>Frete Grátis -<b> Acima R$ 299</b> - Sul e Sudeste</span>
         <div class="divider vertical"></div>
@@ -66,7 +90,7 @@
             <img class="headerLogo" src="./assets/header/logo.png" alt="AuAu Petshop Logo">
 
             <nav>
-                <ul class="flex row">
+                <ul class="flex row mobileHide">
                     <li class="item"><a  href="#">Rações</a></li>
                     <li class="item"><a  href="#">Acessórios</a></li>
                     <li class="item"><a  href="#">Kits</a></li>
@@ -76,12 +100,16 @@
 
             </nav>
 
-        <div class="headerButton flex space between">
-            <a href="#" class="pointer"><img src="./assets/header/search.png" alt="Pesquisar produto"></a>
-            <a href="#" class="pointer"><img src="./assets/header/wish.png" alt="Lista de desejos"></a>
-            <a href="#" class="pointer"><img src="./assets/header/cart.png" alt="Carrinho"></a>
+            <div class="headerButton flex space between">
+                <a href="#" class="pointer"><img src="./assets/header/search.png" alt="Pesquisar produto"></a>
+                <a href="#" class="pointer"><img src="./assets/header/wish.png" alt="Lista de desejos"></a>
+                <a href="#" id="minicartBtn" onclick="openCart()" class="pointer"><img src="./assets/header/cart.png" alt="Carrinho"></a>
+            </div>
+
         </div>
 
+        <div class="sectionMobileMenu mobileOnly">
+            <a href="#" class="menuIcon mgl-15"><img src="./assets/header/bars-solid.svg" alt="menu icon"></a>
         </div>
 </header>
 
@@ -93,14 +121,14 @@
 
     <div class="pageContent flex itens content center mgt-40 column">
         <div class="groupContainer mgb-15 flex itens center">
-            <div class="divider horizontal medium"></div>
+            <div class="divider horizontal medium mobileHide"></div>
 
                     <div class="groupTitle flex column itens content center">
                         <span class="strong textColor">Os Nossos Queridinhos</span>
                         <span class="small textColor">Produtos escolhidos com carinho para você!</span>
                     </div>
 
-            <div class="divider horizontal medium"></div>
+            <div class="divider horizontal medium mobileHide"></div>
 
            
             </div>
@@ -195,15 +223,15 @@
             </div>
 
             <div class="groupContainer mgb-15 flex itens center">
-                <div class="divider horizontal medium  mgr-35"></div>
+                <div class="divider horizontal medium  mgr-35 mobileHide"></div>
                     <div class="groupTitle flex column itens content center">
                         <span class="strong textColor">Produtos Exclusivos</span>
 
                     </div>
-                <div class="divider horizontal medium  mgl-35"></div>
+                <div class="divider horizontal medium  mgl-35 mobileHide"></div>
             </div>
 
-            <div class="groupContent flex slider" id="slider">
+            <div class="groupContent flex slider" >
 
 
                     <div class="carousel responsive" >
@@ -375,15 +403,15 @@
    
           
         <div class="groupContainer mgb-15 mgt-40 flex itens center">
-            <div class="divider horizontal medium  mgr-35"></div>
+            <div class="divider horizontal medium  mgr-35 mobileHide"></div>
                 <div class="groupTitle flex column itens content center">
                     <span class="strong textColor">Produtos Exclusivos</span>
 
                 </div>
-            <div class="divider horizontal medium  mgl-35"></div>
+            <div class="divider horizontal medium  mgl-35 mobileHide"></div>
         </div>
 
-        <div class="groupContent flex slider footer" id="slider">
+        <div class="groupContent flex slider footer" >
 
 
                 <div class="carousel responsive" >

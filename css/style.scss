@@ -16,6 +16,8 @@ header {
     width: 100%;
 }
 
+
+
 .headerContent {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -88,6 +90,10 @@ nav {
     .sideBanner {
         width: 450px;
         height: auto;
+         
+        @media screen and (max-width: 410px) {
+            width: 325px;
+        }
     }
 }
 
@@ -159,8 +165,14 @@ nav {
     overflow-x: scroll;
     overflow-y: hidden;
 
+
     &.footer {
         width: 920px;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: row;
     }
   }
   
@@ -298,3 +310,72 @@ background: #F7F3F0;
         }
     }
 }
+
+.newsletterModalContainer {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+
+    .newsletterContent {
+        width: 800px;
+        height: 504px;
+    
+        background-image: url(../assets/newsletter/newsletter.png);
+    
+
+        .textContent {
+            width: 300px;
+
+            .inputContainer {
+                background: #ffffff;
+                height: 40px;
+                
+                .newsletterBtn {
+                    border: none;
+                    background: #000;
+                    color: #fff;
+                    width: 85px;
+                    height: 30px;
+                    text-transform: uppercase;
+                }
+            }
+
+            
+        }
+    }
+    
+
+}
+
+
+
+// html {
+    
+//     overflow: hidden;
+//   }
+
+// @media print {
+
+//     html {
+//         visibility: hidden ;
+//         display: none;
+//     }
+//     ::-webkit-scrollbar {
+//         display: none;
+//     }
+    
+//     #section-to-print, #section-to-print * {
+//       visibility: visible;
+//     }
+//     #section-to-print {
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//     }
+//   }

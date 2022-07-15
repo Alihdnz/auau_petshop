@@ -81,6 +81,12 @@ nav li.item:last-child a {
   height: auto;
 }
 
+@media screen and (max-width: 410px) {
+  .sideBannerContainer .sideBanner {
+    width: 325px;
+  }
+}
+
 .Price {
   font-weight: bold;
 }
@@ -152,6 +158,16 @@ nav li.item:last-child a {
 
 .slider.footer {
   width: 920px;
+}
+
+.slider .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .slider::-webkit-scrollbar {
@@ -278,5 +294,46 @@ nav li.item:last-child a {
 
 .minicart .productInCart span {
   font-size: 16px;
+}
+
+.newsletterModalContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.52);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99999;
+}
+
+.newsletterModalContainer .newsletterContent {
+  width: 800px;
+  height: 504px;
+  background-image: url(../assets/newsletter/newsletter.png);
+}
+
+.newsletterModalContainer .newsletterContent .textContent {
+  width: 300px;
+}
+
+.newsletterModalContainer .newsletterContent .textContent .inputContainer {
+  background: #ffffff;
+  height: 40px;
+}
+
+.newsletterModalContainer .newsletterContent .textContent .inputContainer .newsletterBtn {
+  border: none;
+  background: #000;
+  color: #fff;
+  width: 85px;
+  height: 30px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

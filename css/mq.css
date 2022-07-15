@@ -1,0 +1,61 @@
+@media screen and (max-width: 410px) {
+  .mobileHide {
+    display: none;
+  }
+  .headerLogo {
+    margin: 0;
+    width: 135px;
+  }
+  .sectionMobileMenu {
+    min-height: 50px;
+    width: 100%;
+  }
+  .sectionMobileMenu a > img {
+    width: 32px;
+    height: auto;
+  }
+  .topsellers.products {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footerBanners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footerBanners img {
+    width: 350px;
+    height: auto;
+  }
+  .slider {
+    width: 374px;
+  }
+  .slider.footer {
+    width: 374px;
+  }
+  .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brands img {
+    width: 310px;
+  }
+}
+
+@media screen and (min-width: 411px) {
+  .mobileOnly {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mq.css.map */

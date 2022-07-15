@@ -1,0 +1,63 @@
+@media screen and (max-width: 410px) {
+    .mobileHide {
+        display: none;
+    }
+
+    .headerLogo {
+        margin: 0;
+        width: 135px;
+    }
+
+    .sectionMobileMenu {
+        //background-color: #2C3E50;
+        min-height: 50px;
+        width: 100%;
+
+        a > img {
+            width: 32px;
+            height: auto;
+
+        }
+    }
+
+    
+    .topsellers.products {
+    flex-direction: column;   
+    align-items: center;
+    }
+
+    .footerBanners {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 350px;
+            height: auto;
+        }
+    }
+
+    .slider {
+        width: 374px;
+
+        &.footer {
+            width: 374px;
+
+        }
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .brands {
+        img {
+            width: 310px;
+        }
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .mobileOnly {
+        display: none;
+    }
+}
