@@ -57,5 +57,11 @@
   .mobileOnly {
     display: none;
   }
+  .mgr-20-computerOnly {
+    margin-right: 20px;
+  }
+  .mgl-20-computerOnly {
+    margin-left: 20px;
+  }
 }
 /*# sourceMappingURL=mq.css.map */

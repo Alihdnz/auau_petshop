@@ -54,10 +54,28 @@
             width: 310px;
         }
     }
+
+
 }
 
 @media screen and (min-width: 411px) {
     .mobileOnly {
         display: none;
+    }
+
+    
+    // bases
+
+    .mgr-20-computerOnly {
+        
+            margin-right: 20px;
+        
+        
+    }
+    .mgl-20-computerOnly {
+        
+            margin-left: 20px;
+        
+        
     }
 }

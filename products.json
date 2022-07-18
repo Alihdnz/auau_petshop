@@ -1,13 +1,105 @@
-{"products":[ {
-    "id" : 1,
-    "image": "./assets/product/product-1.png",
-    "name" : "product1",
-    "price" : 15.90
-  },
-  {
-    "id" : 2,
-    "image": "./assets/product/product-2.png",
-    "name" : "product2",
-    "price" : 20.90
-  }
-]}
+[ {
+  "id" : 1,
+  "image": "./assets/product/product-1.png",
+  "name" : "product1",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 21.90,
+  "priceDiscount": 15.90,
+
+  "topSellers": false,
+
+  "group": false,
+  "groupId": null,
+  "groupName": null
+},
+{
+  "id" : 2,
+  "image": "./assets/product/product-1.png",
+  "name" : "product2",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 41.90,
+  "priceDiscount": 22.90,
+  "topSellers": true,
+  "group": true,
+  "groupId": 132,
+  "groupName": "Produtos Exclusivos"
+},
+{
+  "id" : 4,
+  "image": "./assets/product/product-2.png",
+  "name" : "product3",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 7.90,
+  "priceDiscount": 5.90,
+  "topSellers": true,
+  "group": true,
+  "groupId": 132,
+  "groupName": "Produtos Exclusivos"
+},
+{
+  "id" : 5,
+  "image": "./assets/product/product-2.png",
+  "name" : "product5",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 18.90,
+  "priceDiscount": 15.90,
+  "topSellers": false,
+  "group": true,
+  "groupId": 132,
+  "groupName": "Produtos Exclusivos"
+},
+{
+  "id" : 6,
+  "image": "./assets/product/product-2.png",
+  "name" : "product6",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 17.90,
+  "priceDiscount": 12.90,
+  "topSellers": false,
+  "group": true,
+  "groupId": 132,
+  "groupName": "Produtos Exclusivos"
+},
+{
+  "id" : 7,
+  "image": "./assets/product/product-2.png",
+  "name" : "product7",
+  "attribute":[
+    {
+      "color": "misto",
+      "size": "3m"
+    }
+  ],
+  "price" : 30.90,
+  "priceDiscount": 20.00,
+  "topSellers": false,
+  "group": true,
+  "groupId": 132,
+  "groupName": "Produtos Exclusivos"
+}
+]

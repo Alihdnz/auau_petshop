@@ -118,6 +118,12 @@ nav li.item:last-child a {
   height: auto;
 }
 
+@media screen and (max-width: 410px) {
+  .productImage {
+    width: 150px;
+  }
+}
+
 .productCard {
   max-width: 218px;
 }

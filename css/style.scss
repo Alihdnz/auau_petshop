@@ -123,6 +123,10 @@ nav {
 .productImage {
     width: 216px;
     height: auto;
+
+    @media screen and (max-width: 410px) {
+        width: 150px;
+    }
 }
 
 .productCard {

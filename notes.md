@@ -1,11 +1,6 @@
-Development Steps:
-
-html & css:
-
-[x] ajust container products "os nossos queridinhos"
-[x] create group "produtos exclusivos"
-[x] insert Banners
-[x] create group "produtos exclusivos"
-[] create footer
-[] create minicart
-
+Development Steps :
+[x] criar template do card de produto
+[x] exibir produtos topsellers
+[x] exibir grupo de produtos exclusivos
+[] exibir produtos em localhost no carrinho
+[] vincular função de adicionar no carrinho
