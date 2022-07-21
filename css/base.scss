@@ -61,6 +61,8 @@ li {
     color: var(--text-color);
     transition: .1s cubic-bezier(.17,.67,.83,.67);
 
+ 
+
 }
 
 .button.select {
@@ -81,8 +83,10 @@ li {
     position: fixed;
 }
 
-.border.none {
+.border {
+    &.none {
     border: none;
+}
 }
 
 /* objects */
@@ -181,10 +185,18 @@ font-size: 26px;
 
 .mgl-10 {
     margin-left: 10px;
+
+    &.x10 {
+        margin-left: 100px;
+    }
 }
 .mgl-15 {
     margin-left: 15px;
-}
+
+    &.x10 {
+        margin-left: 150px;
+    }
+} 
 
 .mgl-20 {
     margin-left: 20px;
@@ -219,6 +231,9 @@ font-size: 26px;
     margin-right: 35px;
 }
 
+.mgb-5 {
+    margin-bottom: 5px;
+}
 .mgb-10 {
     margin-bottom: 10px;
 }
@@ -309,6 +324,10 @@ font-size: 26px;
 
 }
 
+.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
 
 
 

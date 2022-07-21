@@ -10,7 +10,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+      }
+      
+    &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        background-color: #c0c0c0;
+        border-radius: 20px;
+        transition: .1s cubic-bezier(.17,.67,.83,.67);
+
+        &:hover{
+            background-color: #161616;
+        }
+      }
+    
 }
+
+  
 
 header {
     width: 100%;
@@ -73,6 +94,14 @@ nav {
     
 }
 
+.menuMobileContent {
+    nav {
+        li.item {
+            margin: 5px;
+        }
+    }
+}
+
 .headerButton {
     width: 160px;
     margin-left: 50px;
@@ -115,6 +144,13 @@ nav {
     border-radius: 22px;
     visibility: hidden;
     opacity: 0;
+
+    
+}
+
+.inactive {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .products{
@@ -132,6 +168,45 @@ nav {
 .productCard {
     max-width: 218px;
 
+    .buttonsCardContainer {
+      //  position: absolute;
+
+      margin-left: 150px;
+    margin-bottom: 52px;
+    margin-top: -150px;
+    width: 42px;
+
+    @media screen and (max-width: 410px) {
+        margin-left: 100px;
+    }
+    .circularIconBtn{
+        
+        border: none;
+    background: #fff;
+    border-radius: 100%;
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 7px;
+
+    visibility:hidden;
+    opacity: 0;
+        
+        @media screen and (max-width: 410px) {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+    &.added {
+        background: rgb(255, 0, 51) !important;
+    }
+
+     img {
+        margin-left: 2px;
+    margin-top: 5px;
+     }
+    }
+}
+    
     &:hover {
 
         border: 0.5px solid #828282;
@@ -140,8 +215,24 @@ nav {
         visibility: visible;
         opacity: 1;
     }
+
+    .circularIconBtn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+        
+    }
+
+    @media screen and (max-width: 410px) {
+        .buttonComprar {
+            visibility: visible;
+            opacity: 1;
     }
 }
+}
+
+
 
 .pageContent {
     max-width: 940px;
@@ -149,6 +240,48 @@ nav {
 
 .groupContent {
     grid-template-columns: repeat(2, 1fr);
+
+    .slideControllers {
+        margin-top: 277px;
+        z-index: 99;
+
+
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+    .arrowLeft, .arrowRight{
+
+
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: var(--sandy-brown);
+        border-radius: 100%;
+        position: absolute;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        svg {
+            fill: #F7F3F0; 
+            width: 35px;
+            height: 35px;
+        }
+
+    }
+
+    
+    .arrowRight {
+        margin-left: 880px;
+
+        @media screen and (max-width: 410px) {
+            margin-left: 330px;
+            
+        }
+    }
+}
 
 }
 
@@ -161,14 +294,14 @@ nav {
 
 // slide config
 
+
+
 .slider {
-    width: 98%;
+    width: 96%;
     height: 620px;
     position: relative;
     margin: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-
+   
 
     &.footer {
         width: 920px;
@@ -177,6 +310,14 @@ nav {
     .carousel {
         display: flex;
         flex-direction: row;
+        overflow-x: hidden ;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        @media screen and (max-width: 410px) {
+            width: 330px;
+        }
+        
     }
   }
   
@@ -269,6 +410,15 @@ height: 275px;
     height: 720px;
     width: 100%;
 
+    @media screen and (min-width: 410px){
+
+        .slider {
+            width: 53%;
+        }
+        
+    }
+  
+
 background: #F7F3F0;
 }
 
@@ -288,12 +438,34 @@ background: #F7F3F0;
     }
 }
 
+.backgroundFilter {
+    @media screen and (min-width: 410px) {
+        
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.52);
+    
+    }
+    
+visibility: hidden;
+opacity: 0;
+}
 
 .minicart {
     width: 425px;
     height: 914px;
     background: #ffffff;
     right: 0;
+    position: fixed;
+    // visibility: hidden;
+    // opacity: 0;
+
+   
+
+    @media screen and (max-width: 410px) {
+        width: 100%;
+    }
 
     h2 {
         font-weight: 500;
@@ -304,6 +476,17 @@ background: #F7F3F0;
         border-bottom: 2px solid black;
     }
 
+    .cartContent {
+        height: 70%;
+        max-height: 70%;
+        overflow-y: auto;
+
+        @media screen and (max-height: 700px ) {
+            height: 45%;
+        max-height: 45%;
+        }
+    }
+
     .productInCart {
         img {
             width: 80px;
@@ -312,8 +495,62 @@ background: #F7F3F0;
         span {
             font-size: 16px;
         }
+
+       
+
+        .removeProduct {
+            width: 16px;
+            border: none;
+            background: none;
+
+        }
+    }
+
+    #subTotal {
+        border-bottom: #000 solid 2px;
+        padding: 10px;
+        width: 80%;
+    }
+
+    .buttonsMiniCart {
+        .keepBuying {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--sonic-silver);
+
+            &:hover {
+                color: #212121;
+            }
+        }
+
+        .finalizePurchase{
+            background: #21BA45;
+            width: 345px;
+            height: 52px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+        }
     }
 }
+
+#menuMobile {
+    width: 100%;
+    height: 914px;
+    background: #ffffff;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    h2 {
+        font-weight: 500;
+    }
+
+
+}
+
 
 .newsletterModalContainer {
 
@@ -325,13 +562,23 @@ background: #F7F3F0;
     align-items: center;
     justify-content: center;
     z-index: 99999;
-
+    visibility: hidden;
+    opacity: 0;
     .newsletterContent {
         width: 800px;
         height: 504px;
     
         background-image: url(../assets/newsletter/newsletter.png);
-    
+        
+        #closeModal {
+
+            background: none;
+            border: none;
+            width: 20px;
+            height: auto;
+            margin-left: 760px;
+            margin-top: 9px;
+        }
 
         .textContent {
             width: 300px;

@@ -180,8 +180,16 @@ li {
   margin-left: 10px;
 }
 
+.mgl-10.x10 {
+  margin-left: 100px;
+}
+
 .mgl-15 {
   margin-left: 15px;
+}
+
+.mgl-15.x10 {
+  margin-left: 150px;
 }
 
 .mgl-20 {
@@ -218,6 +226,10 @@ li {
 
 .mgr-35 {
   margin-right: 35px;
+}
+
+.mgb-5 {
+  margin-bottom: 5px;
 }
 
 .mgb-10 {
@@ -301,6 +313,11 @@ li {
 
 .visibility.hidden {
   visibility: hidden;
+}
+
+.active {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .cubicBezier-1 {
