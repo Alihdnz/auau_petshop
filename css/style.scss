@@ -567,9 +567,15 @@ opacity: 0;
     .newsletterContent {
         width: 800px;
         height: 504px;
-    
+        
+
+
         background-image: url(../assets/newsletter/newsletter.png);
         
+        @media screen and (max-width: 410px) {
+            width: 340px;
+            height: 458px;
+        }
         #closeModal {
 
             background: none;
@@ -578,10 +584,16 @@ opacity: 0;
             height: auto;
             margin-left: 760px;
             margin-top: 9px;
+
+            @media screen and (max-width: 410px) {
+                margin-left: 300px;
+            }
         }
 
         .textContent {
             width: 300px;
+            margin-top: 100px;
+            margin-left: 400px ;
 
             .inputContainer {
                 background: #ffffff;
@@ -597,6 +609,13 @@ opacity: 0;
                 }
             }
 
+            @media screen and (max-width: 410px) {
+                width: 300px;   
+
+                margin-left: 20px;
+                
+                background: rgba(255, 255, 255, 0.413);
+            }   
             
         }
     }
@@ -604,29 +623,74 @@ opacity: 0;
 
 }
 
-
-
-// html {
+.searchBox {
+    margin-top: -52px;
+  
     
-//     overflow: hidden;
-//   }
+    &.searchActive {
+        margin-top: 0;
+    }
 
-// @media print {
+}
 
-//     html {
-//         visibility: hidden ;
-//         display: none;
-//     }
-//     ::-webkit-scrollbar {
-//         display: none;
-//     }
-    
-//     #section-to-print, #section-to-print * {
-//       visibility: visible;
-//     }
-//     #section-to-print {
-//       position: absolute;
-//       left: 0;
-//       top: 0;
-//     }
-//   }
+#searchInput {
+    border: none;
+    width: 400px;
+    height: 50px;
+    font-size: 15px;
+
+    @media screen and (max-width: 410px) {
+        width: 200px;
+    }
+}
+#buttonSearch {
+    border: none;
+    background: #000;
+    color: #fff;
+    width: 85px;
+    height: 50px;
+    text-transform: uppercase;
+}
+
+#searchResult {
+    width: 400px;
+    height: auto;
+    background: #ffffff;
+    position: absolute;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 20px;
+
+    @media screen and (max-width: 410px) {
+        width: 320px;
+    }
+
+    #closeResult {
+        color: #777777;
+        &:hover {
+            color: #000;
+        }
+    }
+
+    #searchList {
+   
+        .resultThumb {
+            width: 40px;
+            height: auto;
+
+            
+        }
+
+        li {
+            height: 79px;
+            width: auto;
+            
+        &:hover {
+            background: var(--sandy-brown);
+        }
+          
+        }
+
+    }
+}

@@ -545,6 +545,13 @@ nav li.item:last-child a {
   background-image: url(../assets/newsletter/newsletter.png);
 }
 
+@media screen and (max-width: 410px) {
+  .newsletterModalContainer .newsletterContent {
+    width: 340px;
+    height: 458px;
+  }
+}
+
 .newsletterModalContainer .newsletterContent #closeModal {
   background: none;
   border: none;
@@ -554,8 +561,16 @@ nav li.item:last-child a {
   margin-top: 9px;
 }
 
+@media screen and (max-width: 410px) {
+  .newsletterModalContainer .newsletterContent #closeModal {
+    margin-left: 300px;
+  }
+}
+
 .newsletterModalContainer .newsletterContent .textContent {
   width: 300px;
+  margin-top: 100px;
+  margin-left: 400px;
 }
 
 .newsletterModalContainer .newsletterContent .textContent .inputContainer {
@@ -570,5 +585,82 @@ nav li.item:last-child a {
   width: 85px;
   height: 30px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 410px) {
+  .newsletterModalContainer .newsletterContent .textContent {
+    width: 300px;
+    margin-left: 20px;
+    background: rgba(255, 255, 255, 0.413);
+  }
+}
+
+.searchBox {
+  margin-top: -52px;
+}
+
+.searchBox.searchActive {
+  margin-top: 0;
+}
+
+#searchInput {
+  border: none;
+  width: 400px;
+  height: 50px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 410px) {
+  #searchInput {
+    width: 200px;
+  }
+}
+
+#buttonSearch {
+  border: none;
+  background: #000;
+  color: #fff;
+  width: 85px;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+#searchResult {
+  width: 400px;
+  height: auto;
+  background: #ffffff;
+  position: absolute;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 410px) {
+  #searchResult {
+    width: 320px;
+  }
+}
+
+#searchResult #closeResult {
+  color: #777777;
+}
+
+#searchResult #closeResult:hover {
+  color: #000;
+}
+
+#searchResult #searchList .resultThumb {
+  width: 40px;
+  height: auto;
+}
+
+#searchResult #searchList li {
+  height: 79px;
+  width: auto;
+}
+
+#searchResult #searchList li:hover {
+  background: var(--sandy-brown);
 }
 /*# sourceMappingURL=style.css.map */

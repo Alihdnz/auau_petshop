@@ -62,14 +62,17 @@ $("#closeModal").click(function(){
   $(".newsletterModalContainer").removeClass("active")
 })
 
+
+// load products
     async function loadProducts() {
       const response = await fetch("./products.json")
       const product = await response.json();
-    
+      
+      // refreshMiniCart Function
       function refreshCart() {
         $(".cartContent").html("")
       }  
-
+      //opencart function
     function openCart() {
         addProduct()
         showCart()
@@ -77,38 +80,66 @@ $("#closeModal").click(function(){
         refreshCart()
         
     }
-    
+    // opencart action button
     $("#minicartBtn").click(function() {
       
         openCart() 
     })
-
     
+    // show & close searchBox 
+
+    $("#searchBtn").click(function() {
+      
+      $(".searchBox").toggleClass("searchActive")
+
+      
+    })
+
+    // Search Products Function
+    function search() {
+      var searchValue = $("#searchInput").val()
+      var filteredProduct = product.filter(obj => obj.name.includes(searchValue))
+      for( let i = 0; i < filteredProduct.length; i = i + 1) {
+        
+      
+        $("#searchResult").addClass("active")
+
+        $("#searchList").append(`<li class="flex itens center pdl-10 cubicBezier-1"><img class="resultThumb" src="`+ filteredProduct[i].image + `">  <span class="resultProductName font-600 mgl-20">` + filteredProduct[i].name +  ` </span> <span class="resultPrice mgl-20">  R$` +filteredProduct[i].priceDiscount.toFixed(2).replace('.' , ',') + ` </span></li>`)
+        }
+    }
+
+    //close Search Result
+
+    $("#closeResult").click(function() {
+      $("#searchResult").removeClass("active")
+    })
+
+    //detect Character
+    $("#searchInput").keypress(function() {
+      if($("#searchInput").val().length >= 2)
+
+      
+      setTimeout(() => {
+        $("#searchList").html("")
+        search()      
+      }, 500)
    
   
-    // coletar dados de uma lista  
-    for( let i = 0; i < product.length; i = i + 1) {
-      //exibir produtos
-      $("#buttonSearch").click(function(evt){
+    
+    
+  })
+    // submit form search
+    $("#buttonSearch").click(function(evt){
 
-        evt.preventDefault()
-        
-        var searchValue = $("#searchInput").val()
-       
-          console.log(product[i].name.includes(searchValue))
-          console.log(product[i].name.indexOf(searchValue))
-        
-       //incluir o resultado da busca do val 0 de indexOF
-      
-          if (product.includes(searchValue) == true) {
-            console.log("entrei o produto")
-          }
-       
-        
-        
+      evt.preventDefault()
+      $("#searchList").html("")
+      search()
+   
+    })   
   
-      })
-        
+    // collect data from a list
+    for( let i = 0; i < product.length; i = i + 1) {
+      //render productCards
           var productCard = 
             `<div class='productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2'> 
            
@@ -138,86 +169,73 @@ $("#closeModal").click(function(){
       
        </div>`
         
-    
+      //show topSellers
           if (product[i].topSellers == true) {
             $('.topSeller').append(productCard)
     
           }
     
-    
+      //show productGroups
           if (product[i].group == true && product[i].groupId !== null) {
            
             $('.productGroup').append(productCard)
 
+          }   
+
+          //wishlist Controllers
+          var wishlist = localStorage.getItem("wishlist")
+              wishlist = JSON.parse(wishlist)
+
+              if (wishlist == null) {
+                wishlist = []
+              }
+
+          function addWishProduct() {
+            
+            localStorage.setItem("wishlist", JSON.stringify(wishlist))
+
           }
-    
-             
-                var wishlist = localStorage.getItem("wishlist")
-                    wishlist = JSON.parse(wishlist)
-
-                    if (wishlist == null) {
-                      wishlist = []
-                    }
-
-                function addWishProduct() {
-                  
-                  localStorage.setItem("wishlist", JSON.stringify(wishlist))
-
-                }
 
           
-// criar uma função de retirar produto
-                function removeWishProduct() {
-                  wishlist.splice(wishlist[i])
-                  localStorage.setItem("wishlist", JSON.stringify(wishlist))
-                  
-                    
-                  }
-
-                  $(".wishListAdd_" + product[i].id).click(function() {
-                    if ($(".wishListAdd_" + product[i].id).hasClass("added")) {
-                      // se o produto ja esta na lista
+                  //remove Product from wishlist
+                    function removeWishProduct() {
+                      wishlist.splice(wishlist[i])
+                      localStorage.setItem("wishlist", JSON.stringify(wishlist))
                       
-                    // retirar
+                        
+                      }
+                    
+                  //add product wishlist 
+                  $(".wishListAdd_" + product[i].id).click(function() {
+                    
+                    // remove product wishlist if it has added
+                    if ($(".wishListAdd_" + product[i].id).hasClass("added")) {
+                
                       removeWishProduct()
                       $(".wishListAdd_" + product[i].id).removeClass("added")
                     }
                     else {
+                      // else add product
                       wishlist.push(product[i])
                       addWishProduct()
-                      // console.log(wishlist[i])
-                      $(".wishListAdd_" + product[i].id).addClass("added")// ao adicionar deixar o campo na cor vermelha
+                      $(".wishListAdd_" + product[i].id).addClass("added")
     
                     }
                     
-                    
                   })
 
-                  
-                  
-               
       
                 var cart = localStorage.getItem("cart")
-                    cart = JSON.parse(cart) // converte string para objeto
+                    cart = JSON.parse(cart) // convert string to obj
     
-                  if(cart == null) { // caso nao haja um conteudo.
-                    cart = [] // inicie um vetor em cart 
+                  if(cart == null) { 
+                    cart = [] 
                   }
-      
 
+                  // add product function
                 function addProduct() {
-                    // adiciona no array cart o produto selecionado
-    
+
                     localStorage.setItem("cart", JSON.stringify(cart))
-                  
-                    
-              
-
-                    
-               
-
-
-                   // $("#carrinho").addClass("active")
 
                     $(".minicartContainer").addClass("active")
 
@@ -235,20 +253,12 @@ $("#closeModal").click(function(){
                   
 
                 
-    
+                // minicart Controller and update
                 function showCart() {
-                 
-               
-    
-                  
-                
                 var subTotal = 0
 
-               // console.log(cart.length)
 
                 for(let i = 0; i < cart.length; i = i + 1) {
-                   
-                
 
                 var result = cart.find( cartItem => cartItem.id === cart[i].id)
 
@@ -266,7 +276,7 @@ $("#closeModal").click(function(){
                   
                   subTotal += cart[i].priceDiscount
 
-                  
+                  // render minicart
                   $("#carrinho").append(`
                   <div class="productInCart flex row mgl-40 mgt-15">
                       <img src="`+ cart[i].image +`">
@@ -326,9 +336,9 @@ $("#closeModal").click(function(){
             } 
                   
                   
-            } // exibir produtos no carrinho
+            } 
             
-              
+            //clean cart
       
                 function clearCart() {
                   
@@ -336,7 +346,7 @@ $("#closeModal").click(function(){
                  
                 }
     
-      //Limpar carrinho
+    
                 $("#clearCart").click(function() {
                     clearCart()
                     localStorage.setItem("cart", JSON.stringify(cart))
@@ -347,7 +357,7 @@ $("#closeModal").click(function(){
            
     
           $(".product_"+ product[i].id).click(function insertItemInCart() {
-            //adicionar no carrrinho
+    
             cart.push(product[i]) 
                 
                 addProduct()
@@ -357,27 +367,20 @@ $("#closeModal").click(function(){
                 showCart()
                 refreshCart()
     
-                 //exibir carrinho
+         
                 })
-           
-    
+
           $("#openMiniCart").click( function() {
             
             refreshCart()
             showCart()
              
           }
-    
-    
-            
-            
-            
-            )
-            
+          
+            )          
          
     }
-    
-    
+ 
     
     }
     loadProducts()

@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/slider.css">
+
     <link rel="stylesheet" href="./css/mq.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/slider.js"></script>
     <script src="./scripts/app.js"></script>
 
 
@@ -24,7 +23,7 @@
 
     <div class="newsletterContent">
         <button id="closeModal" class="pointer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></button>
-        <div class="textContent text-align center mgl-40 mgt-10 x10 ">
+        <div class="textContent text-align center mgl-40 mgt-10">
             <span class="font-22"> Que tal um descontão de <b>10%</b> na sua compra?</span>
 
             <p>Cadastre-se e ganhe um <b>super desconto</b> para aproveitar e deixar seu pet felizão</p>
@@ -97,11 +96,19 @@
 
 <header class="flex column itens center white-bg"> 
 
-    <div class="searchBox">
+    
+    <div class="searchBox flex column itens center cubicBezier-2">
         <form>
-            <input type="text" id="searchInput">
-            <button id="buttonSearch" type="submit">buscar</button>
+            <input type="text" id="searchInput" placeholder="FAÇA AQUI SUA BUSCA">
+            <button id="buttonSearch" class="pointer" type="submit">buscar</button>
         </form>
+
+        <div id="searchResult" class="mgt-55 cubicBezier-2 flex column">
+            <ul id="searchList" class="pointer">
+ 
+            </ul>
+            <a href="#" id="closeResult" class="text-align center">fechar busca</a>
+        </div>
     </div>
 
     <div class="topbar primary-bg flex row itens content center mobileHide">
@@ -134,7 +141,7 @@
             </nav>
 
             <div class="headerButton flex space between">
-                <a href="#" class="pointer"><img src="./assets/header/search.png" alt="Pesquisar produto"></a>
+                <a href="#" id="searchBtn" class="pointer"><img src="./assets/header/search.png" alt="Pesquisar produto"></a>
                 <a href="#" class="pointer"><img src="./assets/header/wish.png" alt="Lista de desejos"></a>
                 <a href="#" id="minicartBtn" class="pointer"><img src="./assets/header/cart.png" alt="Carrinho"></a>
             </div>
