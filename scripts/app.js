@@ -97,7 +97,7 @@ $("#closeModal").click(function(){
 
     // Search Products Function
     function search() {
-      var searchValue = $("#searchInput").val()
+      var searchValue = $("#searchInput").val().toLowerCase()
       var filteredProduct = product.filter(obj => obj.name.includes(searchValue))
       for( let i = 0; i < filteredProduct.length; i = i + 1) {
         
