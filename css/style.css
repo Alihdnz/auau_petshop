@@ -104,7 +104,7 @@ nav li.item:last-child a {
   height: auto;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .sideBannerContainer .sideBanner {
     width: 325px;
   }
@@ -146,7 +146,7 @@ nav li.item:last-child a {
   height: auto;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .productImage {
     width: 150px;
   }
@@ -163,7 +163,7 @@ nav li.item:last-child a {
   width: 42px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .productCard .buttonsCardContainer {
     margin-left: 100px;
   }
@@ -180,7 +180,7 @@ nav li.item:last-child a {
   opacity: 0;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .productCard .buttonsCardContainer .circularIconBtn {
     visibility: visible;
     opacity: 1;
@@ -210,7 +210,7 @@ nav li.item:last-child a {
   opacity: 1;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .productCard .buttonComprar {
     visibility: visible;
     opacity: 1;
@@ -262,7 +262,7 @@ nav li.item:last-child a {
   margin-left: 880px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .groupContent .slideControllers .arrowRight {
     margin-left: 330px;
   }
@@ -300,7 +300,7 @@ nav li.item:last-child a {
       scroll-snap-type: x mandatory;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .slider .carousel {
     width: 330px;
   }
@@ -395,7 +395,7 @@ nav li.item:last-child a {
   background: #F7F3F0;
 }
 
-@media screen and (min-width: 410px) {
+@media screen and (min-width: 430px) {
   .greyContainer .slider {
     width: 53%;
   }
@@ -419,7 +419,7 @@ nav li.item:last-child a {
   opacity: 0;
 }
 
-@media screen and (min-width: 410px) {
+@media screen and (min-width: 430px) {
   .backgroundFilter {
     width: 100%;
     height: 100%;
@@ -436,7 +436,7 @@ nav li.item:last-child a {
   position: fixed;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .minicart {
     width: 100%;
   }
@@ -545,7 +545,7 @@ nav li.item:last-child a {
   background-image: url(../assets/newsletter/newsletter.png);
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .newsletterModalContainer .newsletterContent {
     width: 340px;
     height: 458px;
@@ -561,7 +561,7 @@ nav li.item:last-child a {
   margin-top: 9px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .newsletterModalContainer .newsletterContent #closeModal {
     margin-left: 300px;
   }
@@ -587,7 +587,7 @@ nav li.item:last-child a {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   .newsletterModalContainer .newsletterContent .textContent {
     width: 300px;
     margin-left: 20px;
@@ -610,7 +610,7 @@ nav li.item:last-child a {
   font-size: 15px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   #searchInput {
     width: 200px;
   }
@@ -636,7 +636,7 @@ nav li.item:last-child a {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   #searchResult {
     width: 320px;
   }

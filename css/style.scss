@@ -120,7 +120,7 @@ nav {
         width: 450px;
         height: auto;
          
-        @media screen and (max-width: 410px) {
+        @media screen and (max-width: 430px) {
             width: 325px;
         }
     }
@@ -160,7 +160,7 @@ nav {
     width: 216px;
     height: auto;
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         width: 150px;
     }
 }
@@ -176,7 +176,7 @@ nav {
     margin-top: -150px;
     width: 42px;
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         margin-left: 100px;
     }
     .circularIconBtn{
@@ -191,7 +191,7 @@ nav {
     visibility:hidden;
     opacity: 0;
         
-        @media screen and (max-width: 410px) {
+        @media screen and (max-width: 430px) {
             visibility: visible;
             opacity: 1;
         }
@@ -224,7 +224,7 @@ nav {
         
     }
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         .buttonComprar {
             visibility: visible;
             opacity: 1;
@@ -276,7 +276,7 @@ nav {
     .arrowRight {
         margin-left: 880px;
 
-        @media screen and (max-width: 410px) {
+        @media screen and (max-width: 430px) {
             margin-left: 330px;
             
         }
@@ -314,7 +314,7 @@ nav {
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
 
-        @media screen and (max-width: 410px) {
+        @media screen and (max-width: 430px) {
             width: 330px;
         }
         
@@ -410,7 +410,7 @@ height: 275px;
     height: 720px;
     width: 100%;
 
-    @media screen and (min-width: 410px){
+    @media screen and (min-width: 430px){
 
         .slider {
             width: 53%;
@@ -439,7 +439,7 @@ background: #F7F3F0;
 }
 
 .backgroundFilter {
-    @media screen and (min-width: 410px) {
+    @media screen and (min-width: 430px) {
         
     width: 100%;
     height: 100%;
@@ -463,7 +463,7 @@ opacity: 0;
 
    
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         width: 100%;
     }
 
@@ -572,7 +572,7 @@ opacity: 0;
 
         background-image: url(../assets/newsletter/newsletter.png);
         
-        @media screen and (max-width: 410px) {
+        @media screen and (max-width: 430px) {
             width: 340px;
             height: 458px;
         }
@@ -585,7 +585,7 @@ opacity: 0;
             margin-left: 760px;
             margin-top: 9px;
 
-            @media screen and (max-width: 410px) {
+            @media screen and (max-width: 430px) {
                 margin-left: 300px;
             }
         }
@@ -609,7 +609,7 @@ opacity: 0;
                 }
             }
 
-            @media screen and (max-width: 410px) {
+            @media screen and (max-width: 430px) {
                 width: 300px;   
 
                 margin-left: 20px;
@@ -639,7 +639,7 @@ opacity: 0;
     height: 50px;
     font-size: 15px;
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         width: 200px;
     }
 }
@@ -662,7 +662,7 @@ opacity: 0;
     opacity: 0;
     border-radius: 20px;
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 430px) {
         width: 320px;
     }
 
