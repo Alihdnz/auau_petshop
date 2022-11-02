@@ -15,22 +15,12 @@
     height: auto;
   }
   .topsellers.products {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .footerBanners {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .footerBanners img {
     width: 350px;
@@ -43,16 +33,12 @@
     width: 374px;
   }
   .links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .brands img {
     width: 310px;
   }
 }
-
 @media screen and (min-width: 430px) {
   .mobileOnly {
     display: none;
@@ -63,5 +49,4 @@
   .mgl-20-computerOnly {
     margin-left: 20px;
   }
-}
-/*# sourceMappingURL=mq.css.map */
+}/*# sourceMappingURL=mq.css.map */

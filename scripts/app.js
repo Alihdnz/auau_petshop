@@ -1,8 +1,5 @@
 window.onload = function() {
 
-  
-            
-
   var customerNewsLetter = sessionStorage.getItem("customer")
 
   if (customerNewsLetter == null) {
@@ -11,31 +8,22 @@ window.onload = function() {
     $(".newsletterModalContainer").addClass("active")
   }, 1000)
   }
-
-  
     
 // Close minicart function
 
-  $("#closeCart").click( function() {
+  $("#closeCart, .keepBuying").click( function() {
     $(".minicartContainer").removeClass("active")
   })
 
-  $(".keepBuying").click(function() {
-    $(".minicartContainer").removeClass("active")
-  } )
 
-// end close minicart function
 
 // open & close menuMobile function
 
-  $("#menuMobileBtn").click(function() {
-    $("#menuMobile").addClass("active")
+  $("#menuMobileBtn, #closeMenuMobile").click(function() {
+    $("#menuMobile").toggleClass("active")
   })
 
-  $("#closeMenuMobile").click(function() {
-    $("#menuMobile").removeClass("active")
-  })
-
+  
 // submit form newsletter function 
 
 $(".newsletterBtn").on("click", function(e) {
@@ -48,8 +36,6 @@ $(".newsletterBtn").on("click", function(e) {
   setTimeout(() => {
     $(".newsletterModalContainer").removeClass("active")
   }, 500)
-  
-
  
 })
 
@@ -63,6 +49,11 @@ $("#closeModal").click(function(){
 })
 
 
+  // show & close searchBox 
+$("#searchBtn").click(function() {
+  $(".searchBox").toggleClass("searchActive")
+})
+
 // load products
     async function loadProducts() {
       const response = await fetch("./products.json")
@@ -72,27 +63,17 @@ $("#closeModal").click(function(){
       function refreshCart() {
         $(".cartContent").html("")
       }  
-      //opencart function
-    function openCart() {
+      //load minicart function
+      function loadCart() {
         addProduct()
-        showCart()
-        
+        openMiniCart()    
         refreshCart()
         
     }
-    // opencart action button
+    // load minicart action button
     $("#minicartBtn").click(function() {
       
-        openCart() 
-    })
-    
-    // show & close searchBox 
-
-    $("#searchBtn").click(function() {
-      
-      $(".searchBox").toggleClass("searchActive")
-
-      
+        loadCart() 
     })
 
     // Search Products Function
@@ -254,7 +235,7 @@ $("#closeModal").click(function(){
 
                 
                 // minicart Controller and update
-                function showCart() {
+                function openMiniCart() {
                 var subTotal = 0
 
 
@@ -306,7 +287,7 @@ $("#closeModal").click(function(){
                       cart.splice(cartItemPosition, 1)
                       localStorage.setItem("cart", JSON.stringify(cart))
                       refreshCart()
-                      showCart()
+                      openMiniCart()
 
                       
                       if (cart.length < 1 ) {
@@ -364,7 +345,7 @@ $("#closeModal").click(function(){
                
                 
 
-                showCart()
+                openMiniCart()
                 refreshCart()
     
          
@@ -373,7 +354,7 @@ $("#closeModal").click(function(){
           $("#openMiniCart").click( function() {
             
             refreshCart()
-            showCart()
+            openMiniCart()
              
           }
           
