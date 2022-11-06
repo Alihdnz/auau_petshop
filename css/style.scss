@@ -5,6 +5,14 @@
     --sonic-silver: #777777;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/Roboto-Regular.ttf") format('woff2');
+    font-display: swap;
+  }
+
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -107,23 +115,12 @@ nav {
     margin-left: 50px;
 }
 
-.bannerContainer {
-    .fullBanner {
-        width: 100%;
-       }
-}
+
 
 .sideBannerContainer {
 
     max-height: 550px;
-    .sideBanner {
-        width: 450px;
-        height: auto;
-         
-        @media screen and (max-width: 430px) {
-            width: 325px;
-        }
-    }
+    
 }
 
 .Price {
@@ -156,14 +153,7 @@ nav {
 .products{
     grid-template-columns: repeat(3, 1fr);
 }
-.productImage {
-    width: 216px;
-    height: auto;
 
-    @media screen and (max-width: 430px) {
-        width: 150px;
-    }
-}
 
 .productCard {
     max-width: 218px;
