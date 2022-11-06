@@ -1,56 +1,6 @@
 window.onload = function () {
 
-  var customerNewsLetter = sessionStorage.getItem("customer")
-
-  if (customerNewsLetter == null) {
-    setTimeout(() => {
-      $(".newsletterModalContainer").addClass("active")
-    }, 1000)
-  }
-
-  // Close minicart function
-
-  $("#closeCart, .keepBuying").click(function () {
-    $(".minicartContainer").removeClass("active")
-  })
-
-  // open & close menuMobile function
-
-  $("#menuMobileBtn, #closeMenuMobile").click(function () {
-    $("#menuMobile").toggleClass("active")
-  })
-
-
-  // submit form newsletter function 
-
-  $(".newsletterBtn").on("click", function (e) {
-
-    e.preventDefault() // prevent reload
-
-
-    sessionStorage.setItem("customer", $("#newsletterInput").val()) // store on sessionStorage
-
-    setTimeout(() => {
-      $(".newsletterModalContainer").removeClass("active")
-    }, 500)
-
-  })
-
-  // end submit form newsletter function
-
-
-  // close modal newsletter function
-
-  $("#closeModal").click(function () {
-    $(".newsletterModalContainer").removeClass("active")
-  })
-
-
-  // show & close searchBox 
-  $("#searchBtn").click(function () {
-    $(".searchBox").toggleClass("searchActive")
-  })
-
+  
 
   const url = `./products.json`
 
@@ -66,7 +16,7 @@ window.onload = function () {
           `<div class='productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2'> 
                  
                   <div class="thumbContainer"> 
-                  <img class="productImage" src="${product[i].image}">
+                  <img class="productImage" src="${product[i].image}" alt="${product[i].name}" loading="lazy">
                  
                   <div class="buttonsCardContainer flex column"> 
                      <button class="wishListBtn_${product[i].id} circularIconBtn mgb-5 pointer cubicBezier-1"><img src="./assets/header/wish.png" alt="Lista de desejos"></button>
@@ -164,7 +114,6 @@ window.onload = function () {
               $("#carrinho").append(`
               <div class="productInCart flex row mgl-40 mgt-15">
                   <img src="${cart[i].image}">
-
                   <div class="productCartInfo flex column mgl-20">
                       <span class=" productName font-600">${cart[i].name}</span>
                       <span class="atribute color textColor">Cor: ${cart[i].attribute[0].color}</span>
@@ -172,7 +121,6 @@ window.onload = function () {
       
                       <Span class="productPrice font-600">R$ ${cart[i].priceDiscount.toFixed(2).replace('.', ',')}</Span>
                   </div>        
-
                   <button id='cart_${token}' class="removeProduct mgl-10 x10  mgr-10 pointer"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"/></svg> </button>
               </div>`)
 
@@ -231,35 +179,35 @@ window.onload = function () {
           refreshCart()
         })
 
-     function addWishProduct() {
+      function addWishProduct() {
 
           localStorage.setItem("wishlist", JSON.stringify(wishlist))
 
         }
                 
-        function removeWishProduct() {
-          wishlist.splice(wishlist[i])
-          localStorage.setItem("wishlist", JSON.stringify(wishlist))
+      function removeWishProduct() {
+        wishlist.splice(wishlist[i])
+        localStorage.setItem("wishlist", JSON.stringify(wishlist))
         }
 
         //add or remove a wishlist product 
-        $(".wishListBtn_" + product[i].id).click(function() {
+      $(".wishListBtn_" + product[i].id).click(function() {
 
-          // remove product wishlist if it has added
-          if ($(".wishListBtn_" + product[i].id).hasClass("added")) {
+        // remove product wishlist if it has added
+        if ($(".wishListBtn_" + product[i].id).hasClass("added")) {
 
-            removeWishProduct()
-            $(".wishListBtn_" + product[i].id).removeClass("added")
-          }
-          else {
-            // else add product
-            wishlist.push(product[i])
-            addWishProduct()
-            $(".wishListBtn_" + product[i].id).addClass("added")
+          removeWishProduct()
+          $(".wishListBtn_" + product[i].id).removeClass("added")
+        }
+        else {
+          // else add product
+          wishlist.push(product[i])
+          addWishProduct()
+          $(".wishListBtn_" + product[i].id).addClass("added")
 
-          }
+        }
 
-        })
+      })
 
 
       }
@@ -284,7 +232,10 @@ window.onload = function () {
       
           //detect Character
       $("#searchInput").keypress(function() {
-        if($("#searchInput").val().length >= 2)
+
+        const characterQTD = 2
+
+        if($("#searchInput").val().length >= characterQTD)
   
   
         setTimeout(() => {
@@ -346,10 +297,59 @@ window.onload = function () {
     }
   }
   )
+
+
+
+
+  var customerNewsLetter = sessionStorage.getItem("customer")
+
+  if (customerNewsLetter == null) {
+    setTimeout(() => {
+      $(".newsletterModalContainer").addClass("active")
+    }, 1000)
+  }
+
+  // Close minicart function
+
+  $("#closeCart, .keepBuying").click(function () {
+    $(".minicartContainer").removeClass("active")
+  })
+
+  // open & close menuMobile function
+
+  $("#menuMobileBtn, #closeMenuMobile").click(function () {
+    $("#menuMobile").toggleClass("active")
+  })
+
+
+  // submit form newsletter function 
+
+  $(".newsletterBtn").on("click", function (e) {
+
+    e.preventDefault() // prevent reload
+
+
+    sessionStorage.setItem("customer", $("#newsletterInput").val()) // store on sessionStorage
+
+    setTimeout(() => {
+      $(".newsletterModalContainer").removeClass("active")
+    }, 500)
+
+  })
+
+  // end submit form newsletter function
+
+
+  // close modal newsletter function
+
+  $("#closeModal").click(function () {
+    $(".newsletterModalContainer").removeClass("active")
+  })
+
+
+  // show & close searchBox 
+  $("#searchBtn").click(function () {
+    $(".searchBox").toggleClass("searchActive")
+  })
+
 }
-
-
-
-
-
-
