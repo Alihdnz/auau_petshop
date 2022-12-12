@@ -304,22 +304,6 @@ nav li.item:last-child a {
   width: 1000px !important;
 }
 
-.borderTop {
-  background: transparent url(/assets/product/border-top.png) 0 0 no-repeat padding-box;
-  background-size: 100% !important;
-  background-position: 50%;
-  width: 100%;
-  height: 20px;
-}
-
-.borderBottom {
-  background: transparent url(/assets/product/border-bottom.png) 0 0 no-repeat padding-box;
-  background-size: 100% !important;
-  background-position: 50%;
-  width: 100%;
-  height: 20px;
-}
-
 .greyContainer {
   height: 720px;
   width: 100%;
