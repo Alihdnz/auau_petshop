@@ -304,11 +304,6 @@ nav li.item:last-child a {
   width: 1000px !important;
 }
 
-.footerBanners img {
-  width: 447px;
-  height: 275px;
-}
-
 .borderTop {
   background: transparent url(/assets/product/border-top.png) 0 0 no-repeat padding-box;
   background-size: 100% !important;

@@ -21,10 +21,6 @@
     display: flex;
     flex-direction: column;
   }
-  .footerBanners img {
-    width: 350px;
-    height: auto;
-  }
   .slider {
     width: 374px;
   }

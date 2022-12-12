@@ -16,26 +16,31 @@ window.onload = function () {
 
       for (let i = 0; i < product.length; i = i + 1) {
         //render productCards
-        
-        var productCard =
+
+        var productImage = product[i].image 
+        var productName = product[i].name
+        var productid = product[i].id
+        var productPrice = product[i].price
+        var productPriceDiscount = product[i].priceDiscount       
+        var productCard = 
           `<div class='productCard mgr-5 mgl-5 flex itens content center column cubicBezier-2'> 
                  
                   <div class="thumbContainer"> 
-                  <img class="productImage" src="${product[i].image}" width="${(!isMobile) ? "216px" : "150px"}" height="100%" alt="${product[i].name}" loading="lazy">
+                  <img class="productImage" src="${productImage}" width="${(!isMobile) ? "216px" : "150px"}" height="100%" alt="${productName}" loading="lazy">
                  
                   <div class="buttonsCardContainer flex column"> 
-                     <button class="wishListBtn_${product[i].id} circularIconBtn mgb-5 pointer cubicBezier-1"><img src="./assets/header/wish.png" width="25px" height="24px" alt="Lista de desejos"></button>
-                     <button class="product_${product[i].id} circularIconBtn pointer cubicBezier-1"><img src="./assets/header/cart.png" width="25px" height="23px" alt="Adicionar no carrinho"></button>
+                     <button class="wishListBtn_${productid} circularIconBtn mgb-5 pointer cubicBezier-1"><img src="./assets/header/wish.png" width="25px" height="24px" alt="Lista de desejos"></button>
+                     <button class="product_${productid} circularIconBtn pointer cubicBezier-1"><img src="./assets/header/cart.png" width="25px" height="23px" alt="Adicionar no carrinho"></button>
                   </div>
       
                   </div>
                   
-                  <p class="productName textColor mgt-15">${product[i].name}</p> 
-                   <img class="rating mgt-15" width="59px" height="11px" src="./assets/product/rate.png">
+                  <p class="productName textColor mgt-15">${productName}</p> 
+                   <img class="rating mgt-15" width="59px" alt="rating product" height="11px" src="./assets/product/rate.png">
                    
                    <div class="infoPrice flex row mgt-15">
-                      <span class="Price mgr-10" > R$${product[i].priceDiscount.toFixed(2).replace('.', ',')}</span>
-                      <span class="currentPrice textColor"> R$${product[i].price.toFixed(2).replace('.', ',')}</span>
+                      <span class="Price mgr-10" > R$${productPriceDiscount.toFixed(2).replace('.', ',')}</span>
+                      <span class="currentPrice textColor"> R$${productPrice.toFixed(2).replace('.', ',')}</span>
                   
           
                     </div>
@@ -49,10 +54,14 @@ window.onload = function () {
 
 
         function refreshCart() {
-          $(".cartContent").html("")
+          document.querySelector(".cartContent").innerHTML = ""
         }
+
+        
         //show topSellers
-        if (product[i].topSellers == true) {
+        if (product[i].topSellers) {
+          
+          
           $('.topSeller').append(productCard)
 
         }
@@ -104,11 +113,7 @@ window.onload = function () {
 
             var cartItemPosition = cart.indexOf(result)
 
-
-            $(".buttonComprar").addClass("inactive")
-            $(".circularIconBtn").addClass("inactive")
-
-
+        
             setTimeout(() => {
 
               token = Math.floor(Math.random() * 65536)
@@ -278,7 +283,7 @@ window.onload = function () {
   
   const logo = `<img class="headerLogo" width="${(!isMobile) ? "211px" : "135px"}" height="100%" src="./assets/header/logo.png" alt="AuAu Petshop Logo">`
   const fullBanner = `<img class="fullBanner" width="${screenWidth}" height="100%" alt="Beauty Special Looks, your pet is always warm, shop now" src="./assets/banner/full-banner.png">`
-  const sideBanner = `<img class="sideBanner" width="${(!isMobile) ? "450px" : "325px"}" height='100%' src="./assets/banner/side-banner-1.png">`
+  const sideBanner = `<img class="sideBanner" alt="Banner com cachorro da raça pug vestindo um traje" width="${(!isMobile) ? "450px" : "325px"}" height='100%' src="./assets/banner/side-banner-1.png">`
   const footerBrands = `<img src="./assets/footer/brands.png" width="${(!isMobile) ? "450px" : "310px"}" height='100%'   alt="cartões aceitos">`  
  
  
@@ -289,8 +294,8 @@ window.onload = function () {
 
 
   $('.slideshow').append(`<div class="slideControllers">
-    <button class="arrowLeft pointer cubicBezier-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg></button>
-    <button class="arrowRight pointer cubicBezier-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg></button></div>
+    <button class="arrowLeft pointer cubicBezier-1" aria-label="Deslizar para a esquerda"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg></button>
+    <button class="arrowRight pointer cubicBezier-1" aria-label="Deslizar para a direita"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg></button></div>
     
     `)
 
@@ -369,5 +374,7 @@ window.onload = function () {
   $("#searchBtn").click(function () {
     $(".searchBox").toggleClass("searchActive")
   })
+
+  $(".footerBanners img").attr("width", `${(!isMobile) ? '447px' : '350px'}'`);
 
 }
