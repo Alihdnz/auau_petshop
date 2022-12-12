@@ -37,7 +37,7 @@ window.onload = function () {
                   </div>
                   
                   <p class="productName textColor mgt-15">${productName}</p> 
-                   <img class="rating mgt-15" width="59px" alt="rating product" height="11px" src="./assets/product/rate.png">
+                   <img class="rating mgt-15" width="59px" alt="rating product" height="11px" src="./assets/product/rate.webp">
                    
                    <div class="infoPrice flex row mgt-15">
                       <span class="Price mgr-10" > R$${productPriceDiscount.toFixed(2).replace('.', ',')}</span>
@@ -282,10 +282,10 @@ window.onload = function () {
   
   const screenWidth = window.screen.width;
   
-  const logo = `<img class="headerLogo" width="${(!isMobile) ? "211px" : "135px"}" height="100%" src="./assets/header/logo.png" alt="AuAu Petshop Logo">`
-  const fullBanner = `<img class="fullBanner" width="${screenWidth}" height="100%" alt="Beauty Special Looks, your pet is always warm, shop now" src="./assets/banner/full-banner.png">`
-  const sideBanner = `<img class="sideBanner" alt="Banner com cachorro da raça pug vestindo um traje" width="${(!isMobile) ? "450px" : "325px"}" height='100%' src="./assets/banner/side-banner-1.png">`
-  const footerBrands = `<img src="./assets/footer/brands.png" width="${(!isMobile) ? "450px" : "310px"}" height='100%'   alt="cartões aceitos">`  
+  const logo = `<img class="headerLogo" width="${(!isMobile) ? "211px" : "135px"}" height="100%" src="./assets/header/logo.webp" alt="AuAu Petshop Logo">`
+  const fullBanner = `<img class="fullBanner" width="${screenWidth}" height="100%" alt="Beauty Special Looks, your pet is always warm, shop now" src="./assets/banner/full-banner.webp">`
+  const sideBanner = `<img class="sideBanner" alt="Banner com cachorro da raça pug vestindo um traje" width="${(!isMobile) ? "450px" : "325px"}" height='100%' src="./assets/banner/side-banner-1.webp">`
+  const footerBrands = `<img src="./assets/footer/brands.webp" width="${(!isMobile) ? "450px" : "310px"}" height='100%'   alt="cartões aceitos">`  
  
  
   $(".logoContent").append(logo)
