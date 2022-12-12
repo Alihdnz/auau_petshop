@@ -2,6 +2,7 @@ window.onload = function () {
 
   
 
+  
   const url = `./products.json`
 
   var isMobile = false
